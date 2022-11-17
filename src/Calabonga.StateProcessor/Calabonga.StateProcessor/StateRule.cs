@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Calabonga.StatesProcessor
+namespace Calabonga.StatusProcessor
 {
     /// <summary>
     /// The rule RuleProcessor.

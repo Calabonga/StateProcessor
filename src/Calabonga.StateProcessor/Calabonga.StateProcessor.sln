@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calabonga.StatusProcessor",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calabonga.StateManager.Tests", "Calabonga.StateManager.Tests\Calabonga.StateManager.Tests.csproj", "{8203766A-9120-43BC-A400-6B48B13B28C6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calabonga.StatesProcessor", "Calabonga.StateProcessor\Calabonga.StatesProcessor.csproj", "{FA0A5860-CFE4-4896-BD25-2EF01112C048}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calabonga.StatusProcessor", "Calabonga.StateProcessor\Calabonga.StatusProcessor.csproj", "{FA0A5860-CFE4-4896-BD25-2EF01112C048}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calabonga.StatesProcessor.ConsoleTests", "Calabonga.StateProcessor.ConsoleTests\Calabonga.StatesProcessor.ConsoleTests.csproj", "{BEB37399-3410-4A8E-A48A-16EEE6B885DA}"
 EndProject

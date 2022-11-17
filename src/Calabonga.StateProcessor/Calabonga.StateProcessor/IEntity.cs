@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Calabonga.StatesProcessor {
+namespace Calabonga.StatusProcessor {
 
     /// <summary>
     /// Entity under state observation

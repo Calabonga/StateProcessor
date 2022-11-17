@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Calabonga.StatesProcessor
+namespace Calabonga.StatusProcessor
 {
     /// <summary>
     /// Rule for RuleProcessor interface

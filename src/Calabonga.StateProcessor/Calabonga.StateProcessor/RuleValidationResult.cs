@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Calabonga.StatesProcessor
+namespace Calabonga.StatusProcessor
 {
     /// <summary>
     /// Rule Validation result for RuleProcessor

@@ -1,6 +1,6 @@
 using System;
 
-namespace Calabonga.StatesProcessor {
+namespace Calabonga.StatusProcessor {
 
     /// <summary>
     /// Entity State base class
@@ -12,13 +12,7 @@ namespace Calabonga.StatesProcessor {
             SetStateName();
         }
 
-        public string DisplayName
-        {
-            get
-            {
-                return GetDisplayName();
-            }
-        }
+        public string DisplayName => GetDisplayName();
 
         public string Name { get; private set; }
 

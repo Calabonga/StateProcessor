@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Calabonga.StatesProcessor {
+namespace Calabonga.StatusProcessor {
     /// <summary>
     /// Represent operation result of the state changing
     /// </summary>

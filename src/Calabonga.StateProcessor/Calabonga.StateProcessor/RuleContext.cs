@@ -1,4 +1,4 @@
-namespace Calabonga.StatesProcessor
+namespace Calabonga.StatusProcessor
 {
     /// <summary>
     /// Rule validation context for RuleProcessor
