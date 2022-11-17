@@ -3,19 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calabonga.StateManager.ConsoleTest", "Calabonga.StateManager.ConsoleTest\Calabonga.StateManager.ConsoleTest.csproj", "{C6D4594B-1564-4E04-B684-157060601E10}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calabonga.StatusProcessor", "Calabonga.StateManager.Core\Calabonga.StatusProcessor.csproj", "{C2412CE9-2A95-42F2-A448-0E1299F2DD18}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calabonga.StateManager.Tests", "Calabonga.StateManager.Tests\Calabonga.StateManager.Tests.csproj", "{8203766A-9120-43BC-A400-6B48B13B28C6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calabonga.StatusProcessor", "Calabonga.StateProcessor\Calabonga.StatusProcessor.csproj", "{FA0A5860-CFE4-4896-BD25-2EF01112C048}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calabonga.StatesProcessor.ConsoleTests", "Calabonga.StateProcessor.ConsoleTests\Calabonga.StatesProcessor.ConsoleTests.csproj", "{BEB37399-3410-4A8E-A48A-16EEE6B885DA}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetFramework", "NetFramework", "{16CE4D23-E254-48FB-BA5E-6B821A5E4672}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetStandard", "NetStandard", "{5C9409DF-C3F3-4739-BB21-2AC450B3A6F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,24 +14,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C6D4594B-1564-4E04-B684-157060601E10}.DB|Any CPU.ActiveCfg = DB|Any CPU
-		{C6D4594B-1564-4E04-B684-157060601E10}.DB|Any CPU.Build.0 = DB|Any CPU
-		{C6D4594B-1564-4E04-B684-157060601E10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C6D4594B-1564-4E04-B684-157060601E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C6D4594B-1564-4E04-B684-157060601E10}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C6D4594B-1564-4E04-B684-157060601E10}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C2412CE9-2A95-42F2-A448-0E1299F2DD18}.DB|Any CPU.ActiveCfg = DB|Any CPU
-		{C2412CE9-2A95-42F2-A448-0E1299F2DD18}.DB|Any CPU.Build.0 = DB|Any CPU
-		{C2412CE9-2A95-42F2-A448-0E1299F2DD18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2412CE9-2A95-42F2-A448-0E1299F2DD18}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2412CE9-2A95-42F2-A448-0E1299F2DD18}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2412CE9-2A95-42F2-A448-0E1299F2DD18}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8203766A-9120-43BC-A400-6B48B13B28C6}.DB|Any CPU.ActiveCfg = DB|Any CPU
-		{8203766A-9120-43BC-A400-6B48B13B28C6}.DB|Any CPU.Build.0 = DB|Any CPU
-		{8203766A-9120-43BC-A400-6B48B13B28C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8203766A-9120-43BC-A400-6B48B13B28C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8203766A-9120-43BC-A400-6B48B13B28C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8203766A-9120-43BC-A400-6B48B13B28C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FA0A5860-CFE4-4896-BD25-2EF01112C048}.DB|Any CPU.ActiveCfg = Debug|Any CPU
 		{FA0A5860-CFE4-4896-BD25-2EF01112C048}.DB|Any CPU.Build.0 = Debug|Any CPU
 		{FA0A5860-CFE4-4896-BD25-2EF01112C048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -57,13 +29,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{C6D4594B-1564-4E04-B684-157060601E10} = {16CE4D23-E254-48FB-BA5E-6B821A5E4672}
-		{C2412CE9-2A95-42F2-A448-0E1299F2DD18} = {16CE4D23-E254-48FB-BA5E-6B821A5E4672}
-		{8203766A-9120-43BC-A400-6B48B13B28C6} = {16CE4D23-E254-48FB-BA5E-6B821A5E4672}
-		{FA0A5860-CFE4-4896-BD25-2EF01112C048} = {5C9409DF-C3F3-4739-BB21-2AC450B3A6F6}
-		{BEB37399-3410-4A8E-A48A-16EEE6B885DA} = {5C9409DF-C3F3-4739-BB21-2AC450B3A6F6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC986CC7-DBC9-44BD-BAF7-FCC50A40F3CB}
