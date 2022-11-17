@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Calabonga.StatesProcessor.ConsoleTests.Entities;
+using Calabonga.StatusProcessor;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Threading.Tasks;
-using Calabonga.StateProcessor;
-using Calabonga.StatesProcessor.ConsoleTests.Entities;
 
 namespace Calabonga.StatesProcessor.ConsoleTests.Rules
 {

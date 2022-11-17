@@ -1,9 +1,9 @@
+using Calabonga.StatesProcessor.ConsoleTests.Entities;
+using Calabonga.StatesProcessor.ConsoleTests.States;
+using Calabonga.StatusProcessor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Calabonga.StateProcessor;
-using Calabonga.StatesProcessor.ConsoleTests.Entities;
-using Calabonga.StatesProcessor.ConsoleTests.States;
 
 namespace Calabonga.StatesProcessor.ConsoleTests
 {

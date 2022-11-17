@@ -1,5 +1,5 @@
-﻿using System;
-using Calabonga.StateProcessor;
+﻿using Calabonga.StatusProcessor;
+using System;
 
 namespace Calabonga.StatesProcessor.ConsoleTests.Entities
 {
@@ -11,7 +11,7 @@ namespace Calabonga.StatesProcessor.ConsoleTests.Entities
         public int Id { get; set; }
 
         public Guid ActiveState { get; set; }
-        
+
         public string Name { get; set; }
     }
 }

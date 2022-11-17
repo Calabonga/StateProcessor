@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Calabonga.StatesProcessor.ConsoleTests.Entities;
+using Calabonga.StatesProcessor.ConsoleTests.States;
+using Calabonga.StatusProcessor;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Calabonga.StateProcessor;
-using Calabonga.StatesProcessor.ConsoleTests.Entities;
-using Calabonga.StatesProcessor.ConsoleTests.States;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Calabonga.StatesProcessor.ConsoleTests
 {
@@ -47,6 +47,23 @@ namespace Calabonga.StatesProcessor.ConsoleTests
                     Console.WriteLine("Error: {0}", error);
                 }
             }
+
+            var processorResult2 = await processor.UpdateStatusAsync(entity, StateDeleted.Guid);
+            if (processorResult2.Succeeded)
+            {
+                Console.WriteLine("New state is: {0}", processorResult2.NewState.DisplayName);
+                Console.WriteLine("New state is: {0}", processorResult2.OldStatus.DisplayName);
+            }
+            else
+            {
+                foreach (var error in processorResult2.Errors)
+                {
+
+                    Console.WriteLine("Error: {0}", error);
+                }
+            }
+
+
         }
 
     }

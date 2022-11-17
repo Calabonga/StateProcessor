@@ -15,7 +15,7 @@
 		<PackageReleaseNotes>Asynchronous rules validation implemented</PackageReleaseNotes>
 		<PackageIcon>logo.png</PackageIcon>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Version>3.0.0</Version>
+		<Version>3.0.1</Version>
 	</PropertyGroup>
 
 	<ItemGroup>

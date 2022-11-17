@@ -87,12 +87,12 @@ namespace Calabonga.StatusProcessor
                 throw new ArgumentNullException(nameof(entity));
             }
 
-            if (statusId == null || statusId == Guid.Empty)
+            if (statusId == Guid.Empty)
             {
                 throw new ArgumentNullException(nameof(statusId));
             }
 
-            if (entity.ActiveState == null)
+            if (entity.ActiveState == Guid.Empty)
             {
                 throw new NullReferenceException(nameof(entity.ActiveState));
             }
@@ -105,47 +105,40 @@ namespace Calabonga.StatusProcessor
                 throw new InvalidOperationException($"Requested Status {statusId} not found in state collection. Make sure state registered in dependency injection container.");
             }
 
-            ProcessorResult<IState> result;
             var guid = GetCurrentState(entity);
             var oldStatus = States.FirstOrDefault(x => x.Id.Equals(guid));
             if (guid == statusId)
             {
-                result = new ProcessorResult<IState>
+                return new ProcessorResult<IState>
                 {
                     Succeeded = false,
                     OldStatus = oldStatus,
                     NewState = RequestedState,
                     Errors = new List<string> { "The requested state and current state are equals." }
                 };
-
-                return result;
             }
             var canLeaveCurrentStatus = LeaveFromCurrentState(guid, payload);
-            var canEnterRequestedStatus = await EnterToRequestedStateAsync(statusId, payload);
+            var canEnterRequestedStatus = await EnterToRequestedStateAsync(statusId, payload).ConfigureAwait(false);
             if (canEnterRequestedStatus.IsOk && canLeaveCurrentStatus.IsOk)
             {
                 entity.ActiveState = statusId;
-                result = new ProcessorResult<IState>
+                return new ProcessorResult<IState>
                 {
                     Succeeded = true,
                     OldStatus = oldStatus,
                     NewState = RequestedState
                 };
-
-                return result;
             }
             var list = new List<string>();
             list.AddRange(canEnterRequestedStatus.Errors.ToList());
             list.AddRange(canLeaveCurrentStatus.Errors.ToList());
-            result = new ProcessorResult<IState>
+            return new ProcessorResult<IState>
             {
                 Succeeded = false,
                 OldStatus = oldStatus,
                 NewState = RequestedState,
                 Errors = list
             };
-
-            return result;
         }
 
         private Task<RuleValidationResult> EnterToRequestedStateAsync(Guid requestedStatus, object payload)
@@ -157,7 +150,7 @@ namespace Calabonga.StatusProcessor
             }
             var rules = Rules.Where(x => x.ActiveState.Id.Equals(status.Id));
             var context = new RuleContext<TEntity, TState>(this, payload);
-            var blocks = rules.Select(async rule => await rule.CanEnterAsync(context)).Select(x => x.Result).ToList();
+            var blocks = rules.Select(async rule => await rule.CanEnterAsync(context).ConfigureAwait(false)).Select(x => x.Result).ToList();
             var isOk = !blocks.Select(x => x.IsOk).Contains(false);
             return isOk
                 ? Task.FromResult(new RuleValidationResult())
@@ -171,8 +164,8 @@ namespace Calabonga.StatusProcessor
 
             var blocks = Rules
             .Where(x => x.ActiveState.Id.Equals(status.Id))
-            .Select(async rule => await rule.CanLeaveAsync(new RuleContext<TEntity, TState>(this, payload)))
-            .Select(x=>x.Result)
+            .Select(async rule => await rule.CanLeaveAsync(new RuleContext<TEntity, TState>(this, payload)).ConfigureAwait(false))
+            .Select(x => x.Result)
             .ToList();
 
             var isOk = !blocks.Select(x => x.IsOk).Contains(false);

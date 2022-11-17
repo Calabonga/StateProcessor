@@ -1,15 +1,18 @@
-﻿using System;
-using Calabonga.StateProcessor;
+﻿using Calabonga.StatusProcessor;
+using System;
 
-namespace Calabonga.StatesProcessor.ConsoleTests.States {
+namespace Calabonga.StatesProcessor.ConsoleTests.States
+{
 
-    public class StateBind : EntityState, IAccidentState {
+    public class StateBind : EntityState, IAccidentState
+    {
 
         public static Guid Guid => Guid.Parse("2F45B0D0-1AA7-49CE-9F0D-D8D0485B15DD");
 
         public static string StateDisplayName => "Закреплено";
 
-        protected override string StateName() {
+        protected override string StateName()
+        {
             return AccidentStateTypes.Binded.ToString();
         }
 
@@ -22,7 +25,8 @@ namespace Calabonga.StatesProcessor.ConsoleTests.States {
             return StateDisplayName;
         }
 
-        protected override Guid GetUniqueIdentifier() {
+        protected override Guid GetUniqueIdentifier()
+        {
             return Guid;
         }
     }

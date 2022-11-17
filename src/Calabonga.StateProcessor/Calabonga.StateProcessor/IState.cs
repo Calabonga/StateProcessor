@@ -1,10 +1,12 @@
 using System;
 
-namespace Calabonga.StatusProcessor {
+namespace Calabonga.StatusProcessor
+{
     /// <summary>
     /// Entity state (locked object)
     /// </summary>
-    public interface IState {
+    public interface IState
+    {
 
         string DisplayName { get; }
 

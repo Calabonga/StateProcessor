@@ -1,13 +1,16 @@
 using System;
 
-namespace Calabonga.StatusProcessor {
+namespace Calabonga.StatusProcessor
+{
 
     /// <summary>
     /// Entity State base class
     /// </summary>
-    public abstract class EntityState : IState {
+    public abstract class EntityState : IState
+    {
 
-        protected EntityState() {
+        protected EntityState()
+        {
             SetGuid();
             SetStateName();
         }
@@ -31,15 +34,18 @@ namespace Calabonga.StatusProcessor {
         /// UI friendly state name
         /// </summary>
         /// <returns></returns>
-        public virtual string GetDisplayName() {
+        public virtual string GetDisplayName()
+        {
             return GetType().Name;
         }
 
-        private void SetStateName() {
+        private void SetStateName()
+        {
             Name = StateName();
         }
 
-        private void SetGuid() {
+        private void SetGuid()
+        {
             Id = GetUniqueIdentifier();
 
         }

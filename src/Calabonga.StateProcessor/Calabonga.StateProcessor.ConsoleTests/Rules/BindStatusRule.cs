@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Calabonga.StatesProcessor.ConsoleTests.Entities;
+using Calabonga.StatusProcessor;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Calabonga.StateProcessor;
-using Calabonga.StatesProcessor.ConsoleTests.Entities;
 
 namespace Calabonga.StatesProcessor.ConsoleTests.Rules
 {
@@ -11,7 +11,7 @@ namespace Calabonga.StatesProcessor.ConsoleTests.Rules
 
         public BindStatusRule(IEnumerable<IAccidentState> states)
             : base(states)
-        { 
+        {
 
         }
 
@@ -43,7 +43,7 @@ namespace Calabonga.StatesProcessor.ConsoleTests.Rules
         /// <returns></returns>
         protected override IAccidentState ValidationForStatus(IEnumerable<IAccidentState> statuses)
         {
-            return  statuses.SingleOrDefault(x => x.Name.Equals(AccidentStateTypes.Binded.ToString()));
+            return statuses.SingleOrDefault(x => x.Name.Equals(AccidentStateTypes.Binded.ToString()));
         }
     }
 }

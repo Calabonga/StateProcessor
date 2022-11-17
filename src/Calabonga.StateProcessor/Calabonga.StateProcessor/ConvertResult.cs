@@ -4,14 +4,16 @@
     /// 
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class ConvertResult<T> {
+    public class ConvertResult<T>
+    {
 
         /// <summary>
         /// Result of the conversation
         /// </summary>
         public T Result { get; }
 
-        public ConvertResult(T result) {
+        public ConvertResult(T result)
+        {
             Result = result;
         }
 

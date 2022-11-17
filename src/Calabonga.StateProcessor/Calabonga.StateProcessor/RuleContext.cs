@@ -6,19 +6,14 @@ namespace Calabonga.StatusProcessor
     /// <typeparam name="TEntity"></typeparam>
     /// <typeparam name="TState"></typeparam>
     public class RuleContext<TEntity, TState>
-        where TEntity : IEntity, new() 
+        where TEntity : IEntity, new()
         where TState : IState
-    // /where TState : IState
-
     {
         public RuleContext(StateProcessor<TEntity, TState> processor, object payload = null)
         {
             Processor = processor;
             RuleData = payload;
         }
-
-
-
 
         /// <summary>
         /// Current rule processor

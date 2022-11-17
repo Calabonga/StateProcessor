@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 
-namespace Calabonga.StatusProcessor {
+namespace Calabonga.StatusProcessor
+{
     /// <summary>
     /// Represent operation result of the state changing
     /// </summary>
-    public class ProcessorResult<TStatus> {
+    public class ProcessorResult<TStatus>
+    {
 
         /// <summary>
         /// Requested state for Entity

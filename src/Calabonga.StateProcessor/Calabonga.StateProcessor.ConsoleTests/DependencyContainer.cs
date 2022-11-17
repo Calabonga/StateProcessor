@@ -1,9 +1,9 @@
-﻿using System;
-using Calabonga.StateProcessor;
-using Calabonga.StatesProcessor.ConsoleTests.Entities;
+﻿using Calabonga.StatesProcessor.ConsoleTests.Entities;
 using Calabonga.StatesProcessor.ConsoleTests.Rules;
 using Calabonga.StatesProcessor.ConsoleTests.States;
+using Calabonga.StatusProcessor;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace Calabonga.StatesProcessor.ConsoleTests
 {
@@ -18,6 +18,7 @@ namespace Calabonga.StatesProcessor.ConsoleTests
             services.AddTransient<AccidentStateProcessor>();
             services.AddSingleton<IStateRule<Accident, IAccidentState>, BindStatusRule>();
             services.AddSingleton<IStateRule<Accident, IAccidentState>, FreeStateRule>();
+            services.AddSingleton<IStateRule<Accident, IAccidentState>, DeleteStateRule>();
             services.AddSingleton<IAccidentState, StateBind>();
             services.AddSingleton<IAccidentState, StateFree>();
             services.AddSingleton<IAccidentState, StateCompleted>();

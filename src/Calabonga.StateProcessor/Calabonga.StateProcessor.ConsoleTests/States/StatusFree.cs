@@ -1,15 +1,18 @@
-﻿using System;
-using Calabonga.StateProcessor;
+﻿using Calabonga.StatusProcessor;
+using System;
 
-namespace Calabonga.StatesProcessor.ConsoleTests.States {
+namespace Calabonga.StatesProcessor.ConsoleTests.States
+{
 
-    public class StateFree : EntityState, IAccidentState {
+    public class StateFree : EntityState, IAccidentState
+    {
 
         public static Guid Guid => Guid.Parse("FE9B619B-A034-4D73-92C4-FDFC92C1F277");
 
         public static string StateDisplayName => "Свободно";
 
-        protected override string StateName() {
+        protected override string StateName()
+        {
             return AccidentStateTypes.Free.ToString();
         }
 
@@ -18,7 +21,8 @@ namespace Calabonga.StatesProcessor.ConsoleTests.States {
             return StateDisplayName;
         }
 
-        protected override Guid GetUniqueIdentifier() {
+        protected override Guid GetUniqueIdentifier()
+        {
             return Guid;
         }
     }
